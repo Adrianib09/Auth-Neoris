@@ -1,0 +1,15 @@
+small.error-message {
+    color: #d9534f;
+    font-size: 0.875em;
+    margin-top: 5px;
+    display: block;
+} 
+
+
+small.form-error {
+    color: #d9534f;
+    font-size: 0.875em;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}

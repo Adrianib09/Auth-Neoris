@@ -1,0 +1,29 @@
+<div class="users-list">
+    <h1>Users list</h1>
+    <button (click)="addUser()" class="add-button">Add User</button>
+    <table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>
+                <img [src]="user.profileImage ? user.profileImage : 'assets/images/default.jpg'" alt="User Image" class="user-image">
+            </td> 
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+        <td>
+            <button (click)="editUser(user)">Edit</button>
+            <button (click)="deleteUser(user.id)" class="delete-button">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
